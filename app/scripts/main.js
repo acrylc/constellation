@@ -16,7 +16,7 @@ var gridLayer = L.mapbox.gridLayer(layer2);
 map.addLayer(gridLayer);
 	gridLayer.on('mousemove',function(o) {
     	if (o.data!= undefined){
-	    
+	    	$('#tooltip-overlay').css({'opacity':1});
 	    	stars = o.data['stars'];
 	    	str = '';
 	    	if (stars == -1)
@@ -35,6 +35,8 @@ map.addLayer(gridLayer);
     	}
     }).on('mouseout', function(o) {
         document.getElementById('tooltip-overlay').innerHTML = '';
+       	    	$('#tooltip-overlay').css({'opacity':0});
+
     });
 
 
