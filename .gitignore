@@ -1,0 +1,8 @@
+dist
+.DS_Store
+test
+node_modules
+app/bower_components
+.tmp
+.sass_cache
+
